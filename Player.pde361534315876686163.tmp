@@ -1,0 +1,54 @@
+public class Player{
+  
+  private int x = 0;
+  private int dx = 10;
+  private int y = 0;
+  private int dy = 10;
+  
+  private color Color;
+  
+  private int size = 100;
+  
+  public void begin(){
+    Color = color(random(255), random(255), random(255));
+  }
+  
+  public void moveRight(){
+    x += dx;
+  }
+  public void moveLeft(){
+    x -= dx;
+  }
+  public void display(){
+    fill(Color);
+    triangle(x, y, x - 60, y + 200, x + 60, y + 200);
+    triangle(x - 60, y + 200, x, y + 200, x - 30, y + 260);
+    triangle(x, y + 200, x + 60, y + 200, x + 30, y + 260);
+    
+  }
+  public void setdx(int dx){
+    this.dx = dx;
+  }
+  public void setdy(int dy){
+    this.dy = dy;
+  }
+  public void setx(int x){
+    this.x = x;
+  }
+  public void sety(int y){
+    this.y = y;
+  }
+  public int getx(){
+    return this.x;
+  }
+  public int gety(){
+    return this.y;
+  }
+  public int getdx(){
+    return this.dx;
+  }
+  public int getdy(){
+    return this.dy;
+  }
+  
+}

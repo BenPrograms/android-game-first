@@ -1,0 +1,40 @@
+public class Player{
+  
+  private int x = 100;
+  private int dx = 10;
+  private int y = 100;
+  private int dy = 10;
+  
+  private int size = 100;
+  
+  public void moveY(){
+    y += dy;
+  }
+  public void moveX(){
+    x += dx;
+  }
+  public void display(){
+    fill(random(255), random(255), random(255));
+    ellipse(x, y, size, size);
+    
+  }
+  public void setdx(int dx){
+    this.dx = dx;
+  }
+  public void setdy(int dy){
+    this.dy = dy;
+  }
+  public int getx(){
+    return this.x;
+  }
+  public int gety(){
+    return this.y;
+  }
+  public int getdx(){
+    return this.dx;
+  }
+  public int getdy(){
+    return this.dy;
+  }
+  
+}
